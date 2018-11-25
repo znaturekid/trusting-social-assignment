@@ -2,7 +2,7 @@ export const formatDate = (dateStr) => {
     if (!dateStr) {
         return null;
     }
-    return new Date(dateStr).toDateString();
+    return (new Date(dateStr.replace(/\+.*/g, ''))).toDateString();
 }
 
 export const getFirstImageLink = (multimedia) => {
