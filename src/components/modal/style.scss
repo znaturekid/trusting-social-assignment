@@ -30,6 +30,7 @@
 
 body[modal] {
     overflow-y: hidden;
+    position: fixed;
     #modal {
         padding: 20px;
         min-height: calc(100vh - 40px);
