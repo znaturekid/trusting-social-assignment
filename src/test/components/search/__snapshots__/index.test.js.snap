@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Search => should render self and subcomponents 1`] = `
+<styled.div
+  data-loading={false}
+>
+  <styled.input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Enter text to search"
+    type="text"
+    value="singapore"
+  />
+</styled.div>
+`;
+
+exports[`components Search= should render self and subcomponents 1`] = `
+<styled.div
+  data-loading={false}
+>
+  <styled.input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Enter text to search"
+    type="text"
+    value="singapore"
+  />
+</styled.div>
+`;
+
+exports[`components Search= should render self and subcomponents 2`] = `
+<styled.div
+  data-loading={false}
+>
+  <styled.input
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="Enter text to search"
+    type="text"
+    value="singapore"
+  />
+</styled.div>
+`;
+
+exports[`components Search= should render self and subcomponents 3`] = `null`;

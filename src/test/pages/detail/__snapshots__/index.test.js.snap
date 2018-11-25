@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Detail => should render detail correctly 1`] = `<DetailPage />`;
+
+exports[`components Home => should render home correctly 1`] = `<DetailPage />`;

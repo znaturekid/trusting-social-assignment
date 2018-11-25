@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Item => should render item 1`] = `
+<styled.div
+  onClick={[Function]}
+>
+  <styled.span>
+    source
+  </styled.span>
+  <styled.div>
+    <styled.p>
+      snippet
+    </styled.p>
+  </styled.div>
+</styled.div>
+`;
