@@ -28,7 +28,7 @@ class PaginationComponent extends React.Component {
     }
     pageScroll() {
         const { autoScroll } = this.state;
-        if (!autoScroll) {
+        if (!autoScroll || document.querySelector('body').hasAttribute('modal')) {
             return;
         }
         const { nextPage, loading} = this.props;
