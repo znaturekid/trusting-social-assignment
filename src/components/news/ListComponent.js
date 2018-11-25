@@ -43,6 +43,6 @@ ListComponent.propTypes = {
     viewNews: PropTypes.func,
     loadNews: PropTypes.func,
     list: PropTypes.array.isRequired,
-    loading: PropsTypes.bool.isRequired,
+    loading: PropTypes.bool.isRequired,
 }
 export default ListComponent;
