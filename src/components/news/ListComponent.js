@@ -16,6 +16,13 @@ const ListWrapper = styled.div`
         grid-template-columns: 1fr;
     }
 `
+
+const EmptyList = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 24px;
+`
 class ListComponent extends React.Component {
     componentDidMount () {
         const { loadNews } = this.props;
@@ -23,7 +30,10 @@ class ListComponent extends React.Component {
     }
     render () {
         const { list, viewNews } = this.props;
-        
+        const emptyList = list && list.length === 0;
+        if (emptyList) {
+            return <EmptyList>There are no results that match your search.</EmptyList>
+        }
         return (<ListWrapper>
             { list && list.map((item, index) => (<ItemComponent onClick={viewNews} key={`item_${index}`} item={item}></ItemComponent>)) }
         </ListWrapper>)

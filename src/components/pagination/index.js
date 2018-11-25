@@ -49,8 +49,11 @@ class PaginationComponent extends React.Component {
         this.props.nextPage();
     }
     render () {
-        const { loading, page } = this.props;
+        const { loading, page, loadable } = this.props;
         let loadingText = loading ? 'Loading...' : 'Load More';
+        if (!loadable) {
+            return null;
+        }
         if (page < 200) {
             return (<LoadingButton disabled={loading} onClick={this.onClick}>{loadingText}</LoadingButton>)
         } else {
@@ -62,7 +65,8 @@ class PaginationComponent extends React.Component {
 PaginationComponent.propTypes = {
     nextPage: PropTypes.func.isRequired,
     loading: PropTypes.bool.isRequired,
-    page: PropTypes.number.isRequired
+    page: PropTypes.number.isRequired,
+    loadable: PropTypes.bool.isRequired,
 }
 
 export default PaginationComponent
