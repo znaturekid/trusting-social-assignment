@@ -6,7 +6,7 @@ const fetchNews = (page = 1, query = 'singapore') => (dispatch) => {
         let news = [];
         try {
             dispatch(setLoadingStatus(true));
-            const data = await requestJSON(`https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=5763846de30d489aa867f0711e2b031c&q=${query}&page=${page}`, {
+            const data = await requestJSON(`&q=${query}&page=${page}`, {
                 mode: 'cors'
             });
             dispatch(setCurrentPage(page));
@@ -14,7 +14,6 @@ const fetchNews = (page = 1, query = 'singapore') => (dispatch) => {
             dispatch(setLoadingStatus(false));
             if (data.status === 'OK') {
                 news = data.response.docs;
-                //.filter(x => x.document_type === "article");
             }
         } catch (e) {
             dispatch(setLoadingStatus(false));
