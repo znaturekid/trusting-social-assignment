@@ -30,7 +30,7 @@ const Img = styled.div`
 const Item = styled.div`
     box-shadow: 1px 1px 6px #404040;
     display: grid;
-    background: rgba(0,0,0,0.6);
+    background: rgba(226, 226, 226, 0.6);
     position: relative;
     overflow: hidden;
 ` 
@@ -40,7 +40,7 @@ const InfoWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-content: flex-end;
-    color: #FFF;
+    color: #171616;
     padding: 10px;
     cursor: pointer;
     margin-top: 30px;

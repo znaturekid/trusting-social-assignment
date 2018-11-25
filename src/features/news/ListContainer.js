@@ -5,7 +5,8 @@ import ListComponent from '../../components/news/ListComponent';
 
 const mapStateToProps = (state) => {
     return {
-        list: state.news.listNews
+        list: state.news.listNews,
+        loading: state.news.loading
     }
 }
 

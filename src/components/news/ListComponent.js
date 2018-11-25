@@ -29,9 +29,9 @@ class ListComponent extends React.Component {
         loadNews && loadNews();
     }
     render () {
-        const { list, viewNews } = this.props;
+        const { list, viewNews, loading } = this.props;
         const emptyList = list && list.length === 0;
-        if (emptyList) {
+        if (emptyList && !loading) {
             return <EmptyList>There are no results that match your search.</EmptyList>
         }
         return (<ListWrapper>
@@ -43,5 +43,6 @@ ListComponent.propTypes = {
     viewNews: PropTypes.func,
     loadNews: PropTypes.func,
     list: PropTypes.array.isRequired,
+    loading: PropsTypes.bool.isRequired,
 }
 export default ListComponent;
